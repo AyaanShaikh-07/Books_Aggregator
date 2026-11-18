@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookWorm Haven</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <h1 class="app-title">BookWorm Haven</h1>
+    </div>
+    <div class="header-right">
+      <form id="searchForm" class="search-form" autocomplete="off" action="results.html" method="GET">
+        <input
+          type="text"
+          id="searchInput"
+          name="q"
+          class="comic-input search-input"
+          placeholder="Search books, authors, ISBN…"
+          required
+        />
+        <button type="submit" class="comic-btn search-btn">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Spotlight + Popular -->
+    <div class="content-row">
+
+      <!-- Spotlight -->
+      <section class="spotlight-section">
+        <!-- Background layer that changes per slide -->
+        <div class="spotlight-bg" id="spotlight-bg" aria-hidden="true"></div>
+        <h2 class="spotlight-title">My Recommendations</h2>
+
+        <div class="spotlight-carousel" id="spotlight-carousel">
+          <!-- Slides are injected by JS -->
+        </div>
+
+        <div class="spotlight-indicators" id="spotlight-indicators"></div>
+      </section>
+
+      <!-- Popular -->
+      <section class="popular-section">
+        <h2>Popular</h2>
+        <div class="popular-grid" id="popular-grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

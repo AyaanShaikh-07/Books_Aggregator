@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Book Details - BookWorm Haven</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      background: linear-gradient(120deg, #ffe08a 0%, #ffd1dc 40%, #b3ecff 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      color: #232323;
+    }
+    .back-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #fa709a 0%, #ffe08a 100%);
+      color: #232323;
+      font-family: inherit;
+      font-size: 1.12rem;
+      border-radius: 24px;
+      margin: 1rem 2rem;
+      padding: 0.7rem 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 2px 2px 0 #fa709a33;
+      transition: background 0.18s;
+      border: none;
+    }
+    .back-btn:hover { background: linear-gradient(90deg, #ffe08a 0%, #fa709a 100%); }
+    .details-container {
+      max-width: 720px;
+      margin: 3rem auto;
+      background: #fff9edee;
+      border-radius: 18px;
+      box-shadow: 0 3px 19px #fa709a22;
+      padding: 2.8rem 2.2rem;
+    }
+    .details-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+    }
+    .details-image {
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px #fa709a11;
+    }
+    .details-info { flex: 2; }
+    .details-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 0 #ffe08a;
+    }
+    .details-author {
+      font-size: 1.13rem;
+      color: #fa709a;
+      font-weight: 600;
+      margin: 0.85em 0 1em 0;
+    }
+    .details-label {
+      font-weight: bold;
+      color: #fa709a;
+    }
+    .details-desc {
+  white-space: pre-line;
+  overflow: visible;
+  display: block;
+  text-overflow: unset;
+  max-height: none;
+}
+
+    @media (max-width: 900px) {
+      .details-header {
+        flex-direction: column;
+        align-items: center;
+      }
+      .details-image {
+        width: 60vw;
+        min-width: 180px;
+      }
+      .details-info {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="back-btn" href="javascript:history.back()">← Back</a>
+  <main>
+    <div id="details" class="details-container">Loading…</div>
+  </main>
+  <script src="details.js"></script>
+</body>
+</html>
